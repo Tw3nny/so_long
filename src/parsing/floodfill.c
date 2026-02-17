@@ -6,11 +6,11 @@
 /*   By: matisgutierreztw3nny <matisgutierreztw3    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/12 10:40:43 by matisgutier       #+#    #+#             */
-/*   Updated: 2026/02/13 10:42:35 by matisgutier      ###   ########.fr       */
+/*   Updated: 2026/02/16 10:59:38 by matisgutier      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-# include "so_long.h"
+# include "includes/so_long.h"
 
 void	free_grid(char **grid, int height)
 {

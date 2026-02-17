@@ -6,11 +6,11 @@
 /*   By: matisgutierreztw3nny <matisgutierreztw3    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/13 10:57:57 by matisgutier       #+#    #+#             */
-/*   Updated: 2026/02/13 16:47:22 by matisgutier      ###   ########.fr       */
+/*   Updated: 2026/02/16 14:59:03 by matisgutier      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "so_long.h"
+#include "includes/so_long.h"
 
 static int	check_arg(int ac, char **av)
 {
@@ -41,21 +41,28 @@ static void	valid_map(t_map *map)
 	if (!check_path(map))
 		error("No valid path", map);
 	map->width = ft_strlen(map->grid[0]);
-	ft_printf("Map is valid");
 }
 
 int	main(int ac, char **av)
 {
-	t_map	map;
+	t_games	game;
 	
 	if (!check_arg(ac, av))
 		error("Invalid args", NULL);
-	map.height = count_lines(av[1]);
-	if (map.height<= 0)
+	game.map.height = count_lines(av[1]);
+	if (game.map.height<= 0)
 		error("Empty or invalid file", NULL);
-	map.grid = read_map(av[1], map.height);
-	if (!map.grid)
+	game.map.grid = read_map(av[1], game.map.height);
+	if (!game.map.grid)
 		error("Malloc failed", NULL);
-	valid_map(&map);
+	valid_map(&game.map);
+	game.moves = 0;
+	game.map.grid[game.map.player.y][game.map.player.x] = FLOOR;
+	init_game(&game);
+	load_sprites(&game);
+	render_map(&game);
+	mlx_hook(game.window, 2, 1L << 0, key_handler, &game);
+	mlx_hook(game.window, 17, 0, close_game, &game);
+	mlx_loop(game.mlx);
 	return (0);
 }

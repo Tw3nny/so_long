@@ -6,11 +6,11 @@
 /*   By: matisgutierreztw3nny <matisgutierreztw3    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/11 15:31:30 by matisgutier       #+#    #+#             */
-/*   Updated: 2026/02/13 10:55:10 by matisgutier      ###   ########.fr       */
+/*   Updated: 2026/02/16 10:59:27 by matisgutier      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "so_long.h"
+#include "includes/so_long.h"
 
 int	check_content(t_map *map)
 {

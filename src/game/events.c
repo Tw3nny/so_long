@@ -1,21 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   error.c                                            :+:      :+:    :+:   */
+/*   events.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: matisgutierreztw3nny <matisgutierreztw3    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/02/13 15:32:20 by matisgutier       #+#    #+#             */
-/*   Updated: 2026/02/16 11:33:08 by matisgutier      ###   ########.fr       */
+/*   Created: 2026/02/16 14:30:55 by matisgutier       #+#    #+#             */
+/*   Updated: 2026/02/16 14:34:58 by matisgutier      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "includes/so_long.h"
 
-void	error(char *msg, t_map *map)
+int	key_handler(int	keycode, t_games *game)
 {
-	ft_printf("Error\n : %s\n", msg);
-	if (map && map->grid)
-		free_grid(map->grid, map->height);
-		exit(1);
+	if (keycode == KEY_ESC)
+		close_game(game);
+	else if (keycode == KEY_W || keycode == KEY_UP)
+		move_player(game, 0, -1);
+	else if (keycode == KEY_S || keycode == KEY_DOWN)
+		move_player(game, 0, 1);
+	else if (keycode == KEY_A || keycode == KEY_LEFT)
+		move_player(game, -1, 0);
+	else if (keycode == KEY_D || keycode == KEY_RIGHT)
+		move_player(game, 1, 0);
+	return (0);
 }

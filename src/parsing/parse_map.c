@@ -6,11 +6,11 @@
 /*   By: matisgutierreztw3nny <matisgutierreztw3    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/11 11:14:00 by matisgutier       #+#    #+#             */
-/*   Updated: 2026/02/13 10:57:51 by matisgutier      ###   ########.fr       */
+/*   Updated: 2026/02/16 10:59:43 by matisgutier      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "so_long.h"
+#include "includes/so_long.h"
 
 int	count_lines(char *file)
 {

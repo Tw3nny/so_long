@@ -6,7 +6,7 @@
 /*   By: matisgutierreztw3nny <matisgutierreztw3    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/10 23:10:59 by matisgutier       #+#    #+#             */
-/*   Updated: 2026/02/13 15:36:44 by matisgutier      ###   ########.fr       */
+/*   Updated: 2026/02/16 15:02:01 by matisgutier      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,8 +22,8 @@
 # include <unistd.h>
 # include <stdlib.h>
 # include <fcntl.h>
-# include "libft.h"
-# include "mlx.h"
+# include "libft/libft.h"
+# include "mlx/mlx.h"
 
 // KEYS
 
@@ -62,13 +62,13 @@
 # define COIN 'C'
 # define EXIT 'E'
 
-# define WALL_F	"assets/.xpm"
-# define FLOOR_F "assets/.xpm"
-# define PLAYER_F "assets/.xpm"
-# define COIN_F "assets/.xpm"
-# define EXIT_F "assets/.xpm"
+# define WALL_F	"assets/wall.xpm"
+# define FLOOR_F "assets/floor.xpm"
+# define PLAYER_F "assets/player.xpm"
+# define COIN_F "assets/coin.xpm"
+# define EXIT_F "assets/exit.xpm"
 
-# define IMG_SIZE // 32/64
+# define IMG_SIZE 32
 
 /* ============================== */
 /*           STRUCTURES           */
@@ -131,5 +131,13 @@ void	floodfill(char **grid, int y, int x);
 int		check_path(t_map *map);
 void	error(char *msg, t_map *map);
 
+// GAME
 
+void	init_game(t_games *game);
+void	load_sprites(t_games *game);
+int		close_game(t_games *game);
+void	render_sprite(t_games *game, int y, int x);
+void	render_map(t_games *game);
+int		key_handler(int	keycode, t_games *game);
+void	move_player(t_games *game, int dx, int dy);
 #endif

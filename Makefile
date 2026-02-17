@@ -19,7 +19,11 @@ SRC			= $(SRC_DIR)/main.c \
 			  $(SRC_DIR)/parsing/parse_map.c \
 			  $(SRC_DIR)/parsing/check_P_C_E.c \
 			  $(SRC_DIR)/parsing/floodfill.c \
-			  $(SRC_DIR)/parsing/error.c
+			  $(SRC_DIR)/parsing/error.c \
+			  $(SRC_DIR)/game/init_game.c \
+			  $(SRC_DIR)/game/render.c \
+			  $(SRC_DIR)/game/events.c \
+			  $(SRC_DIR)/game/player.c
 
 OBJ			= $(SRC:.c=.o)
 
@@ -35,9 +39,6 @@ else
 	MLX_FLAGS = -L$(MLX_DIR) -lmlx -lXext -lX11 -lm
 endif
 
-# Includes
-INCLUDES	= -I$(INC_DIR) -I$(LIBFT_DIR) -I$(MLX_DIR)
-
 # Colors
 GREEN		= \033[0;32m
 RESET		= \033[0m
@@ -50,7 +51,7 @@ $(NAME): $(OBJ)
 	@echo "$(GREEN)$(NAME) compiled!$(RESET)"
 
 %.o: %.c
-	@$(CC) $(CFLAGS) $(INCLUDES) -c $< -o $@
+	@$(CC) $(CFLAGS) -I. -c $< -o $@
 
 $(LIBFT):
 	@make -C $(LIBFT_DIR)
