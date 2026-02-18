@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   check_P_C_E.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: matisgutierreztw3nny <matisgutierreztw3    +#+  +:+       +#+        */
+/*   By: matiguti <matiguti@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/11 15:31:30 by matisgutier       #+#    #+#             */
-/*   Updated: 2026/02/16 10:59:27 by matisgutier      ###   ########.fr       */
+/*   Updated: 2026/02/17 11:10:28 by matiguti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 

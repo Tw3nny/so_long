@@ -1,21 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   error.c                                            :+:      :+:    :+:   */
+/*   mlx_destroy_display.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: matiguti <matiguti@student.42.fr>          +#+  +:+       +#+        */
+/*   By: mg <mg@student.42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/02/13 15:32:20 by matisgutier       #+#    #+#             */
-/*   Updated: 2026/02/17 11:08:23 by matiguti         ###   ########.fr       */
+/*   Created: 2020/10/03 18:56:35 by mg                #+#    #+#             */
+/*   Updated: 2020/10/04 01:55:35 by mg               ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "includes/so_long.h"
+#include "mlx_int.h"
 
-void	error(char *msg, t_map *map)
+int	mlx_destroy_display(t_xvar *xvar)
 {
-	ft_printf("Error\n : %s\n", msg);
-	if (map && map->grid)
-		free_grid(map->grid, map->height);
-	exit(1);
+	XCloseDisplay(xvar->display);
 }

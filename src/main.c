@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: matisgutierreztw3nny <matisgutierreztw3    +#+  +:+       +#+        */
+/*   By: matiguti <matiguti@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/13 10:57:57 by matisgutier       #+#    #+#             */
-/*   Updated: 2026/02/16 14:59:03 by matisgutier      ###   ########.fr       */
+/*   Updated: 2026/02/17 11:13:35 by matiguti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,11 +46,11 @@ static void	valid_map(t_map *map)
 int	main(int ac, char **av)
 {
 	t_games	game;
-	
+
 	if (!check_arg(ac, av))
 		error("Invalid args", NULL);
 	game.map.height = count_lines(av[1]);
-	if (game.map.height<= 0)
+	if (game.map.height <= 0)
 		error("Empty or invalid file", NULL);
 	game.map.grid = read_map(av[1], game.map.height);
 	if (!game.map.grid)

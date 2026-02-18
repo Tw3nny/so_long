@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   render.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: matisgutierreztw3nny <matisgutierreztw3    +#+  +:+       +#+        */
+/*   By: matiguti <matiguti@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/16 11:13:15 by matisgutier       #+#    #+#             */
-/*   Updated: 2026/02/16 15:07:43 by matisgutier      ###   ########.fr       */
+/*   Updated: 2026/02/17 11:09:32 by matiguti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ void	render_sprite(t_games *game, int y, int x)
 	int		px;
 	int		py;
 	void	*img;
-	
+
 	px = x * IMG_SIZE;
 	py = y * IMG_SIZE;
 	if (game->map.grid[y][x] == WALL)
@@ -35,7 +35,7 @@ void	render_map(t_games *game)
 {
 	int	y;
 	int	x;
-	
+
 	y = 0;
 	while (game->map.grid[y])
 	{
@@ -47,8 +47,8 @@ void	render_map(t_games *game)
 		}
 		y++;
 	}
-	mlx_put_image_to_window(game->mlx, game->window, game->player.ptr, 
-		game->map.player.x * IMG_SIZE, game->map.player.y *IMG_SIZE);
+	mlx_put_image_to_window(game->mlx, game->window, game->player.ptr,
+		game->map.player.x * IMG_SIZE, game->map.player.y * IMG_SIZE);
 }
 
 void	load_sprites(t_games *game)

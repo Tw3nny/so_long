@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   so_long.h                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: matisgutierreztw3nny <matisgutierreztw3    +#+  +:+       +#+        */
+/*   By: matiguti <matiguti@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/10 23:10:59 by matisgutier       #+#    #+#             */
-/*   Updated: 2026/02/16 15:02:01 by matisgutier      ###   ########.fr       */
+/*   Updated: 2026/02/17 11:00:09 by matiguti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,32 +27,32 @@
 
 // KEYS
 
-#ifdef __APPLE__
+# ifdef __APPLE__
 
-# define KEY_ESC 53
-# define KEY_W 13
-# define KEY_A 0
-# define KEY_S 1
-# define KEY_D 2
+#  define KEY_ESC 53
+#  define KEY_W 13
+#  define KEY_A 0
+#  define KEY_S 1
+#  define KEY_D 2
 
-# define KEY_UP 126
-# define KEY_DOWN 125
-# define KEY_RIGHT 124
-# define KEY_LEFT 123
+#  define KEY_UP 126
+#  define KEY_DOWN 125
+#  define KEY_RIGHT 124
+#  define KEY_LEFT 123
 
-#else
+# else
 
-# define KEY_ESC 65307
-# define KEY_W 119
-# define KEY_A 97
-# define KEY_S 115
-# define KEY_D 100
+#  define KEY_ESC 65307
+#  define KEY_W 119
+#  define KEY_A 97
+#  define KEY_S 115
+#  define KEY_D 100
 
-# define KEY_UP 65362
-# define KEY_DOWN 65364
-# define KEY_RIGHT 65363
-# define KEY_LEFT 65361
-#endif
+#  define KEY_UP 65362
+#  define KEY_DOWN 65364
+#  define KEY_RIGHT 65363
+#  define KEY_LEFT 65361
+# endif
 
 // MAP 
 
@@ -89,7 +89,7 @@ typedef struct s_img
 
 typedef struct s_map
 {
-	char 	**grid;
+	char	**grid;
 	int		width;
 	int		height;
 	int		coins;
@@ -138,6 +138,6 @@ void	load_sprites(t_games *game);
 int		close_game(t_games *game);
 void	render_sprite(t_games *game, int y, int x);
 void	render_map(t_games *game);
-int		key_handler(int	keycode, t_games *game);
+int		key_handler(int keycode, t_games *game);
 void	move_player(t_games *game, int dx, int dy);
 #endif

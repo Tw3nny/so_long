@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   events.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: matisgutierreztw3nny <matisgutierreztw3    +#+  +:+       +#+        */
+/*   By: matiguti <matiguti@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/16 14:30:55 by matisgutier       #+#    #+#             */
-/*   Updated: 2026/02/16 14:34:58 by matisgutier      ###   ########.fr       */
+/*   Updated: 2026/02/17 11:13:11 by matiguti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "includes/so_long.h"
 
-int	key_handler(int	keycode, t_games *game)
+int	key_handler(int keycode, t_games *game)
 {
 	if (keycode == KEY_ESC)
 		close_game(game);

@@ -3,19 +3,19 @@
 /*                                                        :::      ::::::::   */
 /*   floodfill.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: matisgutierreztw3nny <matisgutierreztw3    +#+  +:+       +#+        */
+/*   By: matiguti <matiguti@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/12 10:40:43 by matisgutier       #+#    #+#             */
-/*   Updated: 2026/02/16 10:59:38 by matisgutier      ###   ########.fr       */
+/*   Updated: 2026/02/17 11:07:40 by matiguti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-# include "includes/so_long.h"
+#include "includes/so_long.h"
 
 void	free_grid(char **grid, int height)
 {
 	int	i;
-	
+
 	i = 0;
 	while (i < height)
 	{
@@ -29,7 +29,7 @@ char	**copy_grid(char **grid, int height)
 {
 	int		i;
 	char	**copy;
-	
+
 	copy = malloc(sizeof(char *) * (height + 1));
 	if (!copy)
 		return (NULL);
@@ -66,7 +66,7 @@ int	check_path(t_map *map)
 	char	**copy;
 	int		i;
 	int		j;
-	
+
 	copy = copy_grid(map->grid, map->height);
 	if (!copy)
 		return (0);
