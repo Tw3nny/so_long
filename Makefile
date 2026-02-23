@@ -62,6 +62,7 @@ $(MLX):
 clean:
 	@rm -f $(OBJ)
 	@make -C $(LIBFT_DIR) clean
+	@make -C $(MLX_DIR) clean
 	@echo "Objects cleaned"
 
 fclean: clean

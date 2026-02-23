@@ -6,7 +6,7 @@
 /*   By: matisgutierreztw3nny <matisgutierreztw3    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/10 23:10:59 by matisgutier       #+#    #+#             */
-/*   Updated: 2026/02/16 15:02:01 by matisgutier      ###   ########.fr       */
+/*   Updated: 2026/02/23 00:00:59 by matisgutier      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -83,8 +83,6 @@ typedef struct s_pos
 typedef struct s_img
 {
 	void	*ptr;
-	int		width;
-	int		height;
 }	t_img;
 
 typedef struct s_map
