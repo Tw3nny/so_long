@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   error.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: matisgutierreztw3nny <matisgutierreztw3    +#+  +:+       +#+        */
+/*   By: matiguti <matiguti@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/13 15:32:20 by matisgutier       #+#    #+#             */
-/*   Updated: 2026/02/16 11:33:08 by matisgutier      ###   ########.fr       */
+/*   Updated: 2026/02/17 11:08:23 by matiguti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,5 +17,5 @@ void	error(char *msg, t_map *map)
 	ft_printf("Error\n : %s\n", msg);
 	if (map && map->grid)
 		free_grid(map->grid, map->height);
-		exit(1);
+	exit(1);
 }

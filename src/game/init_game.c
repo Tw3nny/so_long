@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   init_game.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: matisgutierreztw3nny <matisgutierreztw3    +#+  +:+       +#+        */
+/*   By: matiguti <matiguti@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/16 10:49:10 by matisgutier       #+#    #+#             */
-/*   Updated: 2026/02/16 11:03:21 by matisgutier      ###   ########.fr       */
+/*   Updated: 2026/02/17 11:12:21 by matiguti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,8 +17,8 @@ void	init_game(t_games *game)
 	game->mlx = mlx_init();
 	if (!game->mlx)
 		error("MLX init failed", &game->map);
-	game->window = mlx_new_window(game->mlx, 
-	game->map.width * IMG_SIZE, game->map.height * IMG_SIZE, "so_long");
+	game->window = mlx_new_window(game->mlx,
+			game->map.width * IMG_SIZE, game->map.height * IMG_SIZE, "so_long");
 	if (!game->window)
 		error("Window creation failed", &game->map);
 }

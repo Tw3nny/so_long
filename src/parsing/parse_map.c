@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   parse_map.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: matisgutierreztw3nny <matisgutierreztw3    +#+  +:+       +#+        */
+/*   By: matiguti <matiguti@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/11 11:14:00 by matisgutier       #+#    #+#             */
-/*   Updated: 2026/02/16 10:59:43 by matisgutier      ###   ########.fr       */
+/*   Updated: 2026/02/17 11:06:28 by matiguti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ int	count_lines(char *file)
 	int		fd;
 	int		count;
 	char	*line;
-	
+
 	fd = open(file, O_RDONLY);
 	if (fd < 0)
 		return (-1);
@@ -38,7 +38,7 @@ char	**read_map(char *file, int height)
 	int		fd;
 	int		i;
 	char	**grid;
-	
+
 	grid = malloc(sizeof(char *) * (height + 1));
 	if (!grid)
 		return (NULL);
@@ -58,9 +58,9 @@ char	**read_map(char *file, int height)
 
 int	is_rectangular(char **grid)
 {
-	int	i;
+	int		i;
 	size_t	length;
-	
+
 	length = ft_strlen(grid[0]);
 	i = 1;
 	while (grid[i] != NULL)
@@ -74,9 +74,9 @@ int	is_rectangular(char **grid)
 
 int	check_wall(char **grid)
 {
-	int i;
+	int	i;
 	int	i_max;
-	
+
 	i = -1;
 	i_max = ft_strlen(grid[0]) - 1;
 	while (grid[0][++i])
