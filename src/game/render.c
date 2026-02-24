@@ -63,5 +63,8 @@ void	load_sprites(t_games *game)
 	game->exit.ptr = mlx_xpm_file_to_image(game->mlx, EXIT_F, &s, &s);
 	if (!game->wall.ptr || !game->floor.ptr || !game->player.ptr
 		|| !game->collect.ptr || !game->exit.ptr)
-		error("Failed to load sprites", &game->map);
+	{
+		ft_printf("Error\nFailed to load sprites\n");
+		close_game(game);
+	}
 }

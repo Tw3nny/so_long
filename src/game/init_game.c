@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   init_game.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: matiguti <matiguti@student.42.fr>          +#+  +:+       +#+        */
+/*   By: matisgutierreztw3nny <matisgutierreztw3    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/16 10:49:10 by matisgutier       #+#    #+#             */
-/*   Updated: 2026/02/17 11:12:21 by matiguti         ###   ########.fr       */
+/*   Updated: 2026/02/24 17:01:27 by matisgutier      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,13 +20,28 @@ void	init_game(t_games *game)
 	game->window = mlx_new_window(game->mlx,
 			game->map.width * IMG_SIZE, game->map.height * IMG_SIZE, "so_long");
 	if (!game->window)
+	{
+		mlx_destroy_display(game->mlx);
 		error("Window creation failed", &game->map);
+	}
 }
 
 int	close_game(t_games *game)
 {
+	if (game->wall.ptr)
+		mlx_destroy_image(game->mlx, game->wall.ptr);
+	if (game->floor.ptr)
+		mlx_destroy_image(game->mlx, game->floor.ptr);
+	if (game->player.ptr)
+		mlx_destroy_image(game->mlx, game->player.ptr);
+	if (game->collect.ptr)
+		mlx_destroy_image(game->mlx, game->collect.ptr);
+	if (game->exit.ptr)
+		mlx_destroy_image(game->mlx, game->exit.ptr);
 	if (game->window)
 		mlx_destroy_window(game->mlx, game->window);
+	if (game->mlx)
+		mlx_destroy_display(game->mlx);
 	if (game->map.grid)
 		free_grid(game->map.grid, game->map.height);
 	exit(0);

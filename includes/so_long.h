@@ -3,14 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   so_long.h                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: matiguti <matiguti@student.42.fr>          +#+  +:+       +#+        */
+/*   By: matisgutierreztw3nny <matisgutierreztw3    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/02/10 23:10:59 by matisgutier       #+#    #+#             */
-<<<<<<< HEAD
-/*   Updated: 2026/02/23 00:00:59 by matisgutier      ###   ########.fr       */
-=======
-/*   Updated: 2026/02/17 11:00:09 by matiguti         ###   ########.fr       */
->>>>>>> 1cba257d02b69799fb55d43e49d9f4e9acf23d7d
+/*   Created: 2026/02/23 11:38:54 by matisgutier       #+#    #+#             */
+/*   Updated: 2026/02/23 11:38:56 by matisgutier      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 

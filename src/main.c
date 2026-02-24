@@ -57,6 +57,11 @@ int	main(int ac, char **av)
 		error("Malloc failed", NULL);
 	valid_map(&game.map);
 	game.moves = 0;
+	game.wall.ptr = NULL;
+	game.floor.ptr = NULL;
+	game.player.ptr = NULL;
+	game.collect.ptr = NULL;
+	game.exit.ptr = NULL;
 	game.map.grid[game.map.player.y][game.map.player.x] = FLOOR;
 	init_game(&game);
 	load_sprites(&game);
