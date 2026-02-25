@@ -6,7 +6,7 @@
 /*   By: matisgutierreztw3nny <matisgutierreztw3    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/16 10:49:10 by matisgutier       #+#    #+#             */
-/*   Updated: 2026/02/24 17:01:27 by matisgutier      ###   ########.fr       */
+/*   Updated: 2026/02/25 13:03:54 by matisgutier      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,7 +41,10 @@ int	close_game(t_games *game)
 	if (game->window)
 		mlx_destroy_window(game->mlx, game->window);
 	if (game->mlx)
+	{
 		mlx_destroy_display(game->mlx);
+		free(game->mlx);	
+	}
 	if (game->map.grid)
 		free_grid(game->map.grid, game->map.height);
 	exit(0);
