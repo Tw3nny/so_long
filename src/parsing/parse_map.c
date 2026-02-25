@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   parse_map.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: matiguti <matiguti@student.42.fr>          +#+  +:+       +#+        */
+/*   By: matisgutierreztw3nny <matisgutierreztw3    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/11 11:14:00 by matisgutier       #+#    #+#             */
-/*   Updated: 2026/02/17 11:06:28 by matiguti         ###   ########.fr       */
+/*   Updated: 2026/02/25 11:26:51 by matisgutier      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,6 +43,11 @@ char	**read_map(char *file, int height)
 	if (!grid)
 		return (NULL);
 	fd = open(file, O_RDONLY);
+	if (fd < 0)
+	{
+		free(grid);
+		return (NULL);
+	}
 	i = 0;
 	while (i < height)
 	{
